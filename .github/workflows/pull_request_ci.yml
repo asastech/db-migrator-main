@@ -1,0 +1,24 @@
+name: 'ci'
+on:
+  pull_request:
+    branches:
+      - 'main'
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Cache Python dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.pythonLocation }}
+          key: ${{ env.pythonLocation }}-${{ hashFiles('lint.sh') }}-${{ hashFiles('lint-requirements.txt') }}
+      - name: Install linter dependencies
+        run: pip install --upgrade --upgrade-strategy eager -r lint-requirements.txt
+      - name: Lint SQL
+        env:
+          CONCURRENCY: 4
+        run: bash lint.sh
