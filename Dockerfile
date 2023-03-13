@@ -1,4 +1,4 @@
-FROM flyway/flyway:9.15.1-alpine
+FROM flyway/flyway:9.15.2-alpine
 
 LABEL org.opencontainers.image.source = &quot;https://github.com/asastech/db-migrator-main&quot;
 
