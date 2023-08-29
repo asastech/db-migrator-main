@@ -1,4 +1,8 @@
 # DB Migrations
+Database MigratorDatabase Migrator
+
+The Database Migrator project is a Bash-based tool designed to facilitate seamless database schema changes and security mechanisms. It utilizes Flyway, a database migration tool, in conjunction with Bash scripting and Docker. By leveraging the power of Docker, the migrator can be easily deployed and executed within a Kubernetes environment, enabling continuous database updates across various environments. This project streamlines the process of managing and applying database schema changes, ensuring data consistency and maintaining security measures. It provides a reliable and efficient solution for maintaining up-to-date databases in a scalable and automated manner.The Database Migrator project is a Bash-based tool designed to facilitate seamless database schema changes and security mechanisms. It utilizes Flyway, a database migration tool, in conjunction with Bash scripting and Docker. By leveraging the power of Docker, the migrator can be easily deployed and executed within a Kubernetes environment, enabling continuous database updates across various environments. This project streamlines the process of managing and applying database schema changes, ensuring data consistency and maintaining security measures. It provides a reliable and efficient solution for maintaining up-to-date databases in a scalable and automated manner.
+⁦⁩
 
 This repository contains the [Flyway][flyway] migrations used to define Asasy databases.
 
