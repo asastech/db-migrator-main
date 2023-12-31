@@ -21,7 +21,7 @@ services:
       FLYWAY_URL: jdbc:postgresql://db:5432/api
       FLYWAY_USER: postgres
       FLYWAY_PASSWORD: password123
-    restart: always
+    restart: unless-stopped
     depends_on:
       - db
     links:

@@ -1,1 +1,1 @@
-sqlfluff==1.4.2
+sqlfluff==2.1.2
